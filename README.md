@@ -11,15 +11,18 @@ Projet 5 : Générateur de citations ou blagues
 
 ✅ Création du dépôt GitHub.
 ✅ Chaque membre crée sa propre branche.
+
 🔹 Phase 2 : Structure HTML et CSS
 
 🎨 Un membre crée le HTML de base (bouton, zone de texte…).
 🎨 Un autre s’occupe du CSS (design, animations, responsive).
+
 🔹 Phase 3 : Fonctionnalités java-script
 
 🏗️ Un membre gère le tableau de citations/blagues.
 🏗️ Un autre implémente un système de génération aléatoire.
 🏗️ Un autre ajoute une API externe (ex: Chuck Norris API pour des blagues).
+
 🔹 Phase 4 : Améliorations et finalisation
 
 🔍 Ajout d’un système de partage des citations (Twitter, Facebook).
