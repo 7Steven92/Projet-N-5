@@ -13,20 +13,24 @@
         <button type="button" onclick="bouton()">Générer !</button>
         <select name="type" id="Type">
             <option value="none">--choissisez le type--</option>
-            <option value="dark">Sombre</option>
             <option value="dev">Dev</option>
             <option value="global">Global</option>
+            <option value="dark">Sombre</option>
         </select>
         <h2 id="joke"></h2> <!-- La citation ou blague générer -->
         <dialog>
             <button autofocus>Retour</button>
-            <p id="answer">Rien ... </p> <!-- explication de la citation ou blague si possible -->
+            <h3 id="answer">Rien ... </h3> <!-- explication de la citation ou blague si possible -->
+            <br>
+            <p>Désolé.</p>
         </dialog>
         <button>Réponse</button>
 
         <dialog id="desc">
             <button autofocus id="closeBoutton">-</button>
-            <p>Type : <a id="type"></a></p>
+            <h3>Type : <a id="type"></a></h3>
+            <br>
+            <p>Encore désolé.</p>
         </dialog>
         <button id="openBoutton">+</button>
 
