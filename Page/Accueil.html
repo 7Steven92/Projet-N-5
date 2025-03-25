@@ -14,14 +14,20 @@
         <select name="type" id="Type">
             <option value="">--Please choose an option--</option>
             <option value="dev">Dev</option>
+            <option value="global">Global</option>
         </select>
         <h2 id="joke"></h2> <!-- La citation ou blague générer -->
-        <p id='type'></p>
         <dialog>
-            <button autofocus>-</button>
+            <button autofocus>Retour</button>
             <p id="answer">Rien ... </p> <!-- explication de la citation ou blague si possible -->
         </dialog>
-        <button>+</button>
+        <button>Réponse</button>
+
+        <dialog id="desc">
+            <button autofocus id="closeBoutton">-</button>
+            <p>Type : <a id="type"></a></p>
+        </dialog>
+        <button id="openBoutton">+</button>
 
         <script src="Script.js"></script>
     </body>
