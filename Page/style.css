@@ -26,3 +26,8 @@ body {
     background-color: grey;
     color: white;
 }
+.dark-mode button, select {
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
