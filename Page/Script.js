@@ -1,3 +1,24 @@
+// Activer/Désactiver mode sombre.
+document.getElementById("modeSombre").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode"); // "dark-mode" dans le CSS.
+
+    // Sauvegarder la préférence dans le localStorage pour qu'après un rechargement de la page le mode reste celui choisi.
+    if (document.body.classList.contains("dark-mode")){
+        localStorage.setItem("theme", "dark");
+    }
+    else {
+        localStorage.setItem("theme", "light");
+    }
+});
+
+//Appliquer le mode choisi avant le rechargement de la page.
+window.onload = function() {
+    if (localStorage.getItem("theme" === "dark")){
+        document.body.classList.add("dark-mode");
+    }
+}
+
+
 // Génération des blagues. 
 // Modifier directement le contenu de la page web.
 function bouton() {
