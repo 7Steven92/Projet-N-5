@@ -46,5 +46,17 @@ closeButton.addEventListener("click", () => {
   dialog.close();
 });
 
+const descDialog = document.querySelector("#desc");
+const descShowButton = document.querySelector("#desc + #openBoutton");
+const descCloseButton = document.querySelector("#desc #closeBoutton");
+
+descShowButton.addEventListener("click", () => {
+  descDialog.showModal();
+});
+
+descCloseButton.addEventListener("click", () => {
+  descDialog.close();
+});
+
 
 
