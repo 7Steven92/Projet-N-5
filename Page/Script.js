@@ -1,18 +1,19 @@
 // Génération des blagues. 
-Questions = [
-    "Comment appelle-t-on un choux qui vit sous l'eau ?",
-    "Comment appelle-t-on un hamster qui vit dans la lune ?",
-
-]
-Reponses = [
-    "Un choux marin",
-    "un hamsteroid",
-
-]
-
 // Modifier directement le contenu de la page web.
 function bouton() {
-    fetch('https://www.blagues-api.fr/api/random', {
+    var type = document.getElementById("Type").value;
+    if (type == "none") {
+        type = Math.floor(Math.random() * 101);
+        console.log(type);
+        if (type % 2 == 0){
+            type = "dev";
+        }
+        else {
+            type = "global";
+        }
+    }
+
+    fetch('https://www.blagues-api.fr/api/type/' + type + '/random', {
         headers: {
           'Authorization': ` Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjg3MzQ5NzY5NTk2Njk4NjQzIiwibGltaXQiOjEwMCwia2V5IjoiWHZIZTVRbEJuRHYzcDBoeVlKQU9ldUU4TmZ0Y2lBSmJONElRR1lXbmtWNEhtb1A5dzQiLCJjcmVhdGVkX2F0IjoiMjAyNS0wMy0xOFQxMjo1MToyNyswMDowMCIsImlhdCI6MTc0MjMwMjI4N30.HG3q3Xc5eofHGrz4Jv3DPh6rxA3-3RyakicCFQt4o30 `
         }
