@@ -3,10 +3,13 @@
 function bouton() {
     var type = document.getElementById("Type").value;
     if (type == "none") {
-        type = Math.floor(Math.random() * 101);
+        type = Math.floor(Math.random() * 30);
         console.log(type);
-        if (type % 2 == 0){
+        if (type >= 0 && type <10){
             type = "dev";
+        }
+        else if (type >= 10 && type < 20){
+            type = "dark";
         }
         else {
             type = "global";
