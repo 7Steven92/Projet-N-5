@@ -1,4 +1,0 @@
-global
-limit
-dark
-dev
