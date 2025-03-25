@@ -59,9 +59,9 @@ function bouton() {
 }
 
 // Ouverture/Fermeture de la déscription.
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("dialog + button");
-const closeButton = document.querySelector("dialog button");
+const dialog = document.querySelector("#rep");
+const showButton = document.querySelector("#rep + #repOpenBoutton");
+const closeButton = document.querySelector("#rep #repCloseBoutton");
 
 showButton.addEventListener("click", () => {
   dialog.showModal();
@@ -72,8 +72,8 @@ closeButton.addEventListener("click", () => {
 });
 
 const descDialog = document.querySelector("#desc");
-const descShowButton = document.querySelector("#desc + #openBoutton");
-const descCloseButton = document.querySelector("#desc #closeBoutton");
+const descShowButton = document.querySelector("#desc + #descOpenBoutton");
+const descCloseButton = document.querySelector("#desc #descCloseBoutton");
 
 descShowButton.addEventListener("click", () => {
   descDialog.showModal();
