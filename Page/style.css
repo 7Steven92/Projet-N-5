@@ -4,9 +4,25 @@ body {
     color : black;
     transition: background-color 0.3s, color 0.3s;
 }
+#rep {
+    background-color: white;
+    color : black;
+}
+#desc {
+    background-color: white;
+    color : black;
+}
 
 /* Mode sombre */
 .dark-mode {
-    background-color: black;
+    background-color: grey;
+    color: white;
+}
+.dark-mode #rep {
+    background-color: grey;
+    color: white;
+}
+.dark-mode #desc {
+    background-color: grey;
     color: white;
 }
