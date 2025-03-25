@@ -13,7 +13,7 @@ document.getElementById("modeSombre").addEventListener("click", function() {
 
 //Appliquer le mode choisi avant le rechargement de la page.
 window.onload = function() {
-    if (localStorage.getItem("theme" === "dark")){
+    if (localStorage.getItem("theme") === "dark"){
         document.body.classList.add("dark-mode");
     }
 }
