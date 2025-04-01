@@ -1,106 +1,114 @@
 /* ========================== BASE ========================== */
+/* Réinitialisation des marges et des espacements pour tous les éléments, 
+   utilisation d'une boîte de calcul de taille consistante et police de base */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Permet de mieux gérer les bordures et les espacements */
+    font-family: Arial, sans-serif; /* Police de caractères de base */
 }
 
 body {
-    display: flex;
+    display: flex; /* Utilisation de flexbox pour centrer le contenu */
     justify-content: center; /* Centre le contenu horizontalement */
     align-items: center; /* Centre le contenu verticalement */
-    height: 100vh;
-    background-color: #f5f5f5;
-    transition: background 0.3s, color 0.3s;
-    position: relative; /* Permet de positionner les éléments absolus */
-    overflow: hidden; /* Empêche le débordement des images décoratives */
+    height: 100vh; /* Hauteur de la fenêtre pour occuper toute la hauteur */
+    background-color: #f5f5f5; /* Couleur de fond claire pour le mode normal */
+    transition: background 0.3s, color 0.3s; /* Transition douce lors du changement de mode */
+    position: relative; /* Positionnement relatif pour gérer les éléments absolus */
+    overflow: hidden; /* Empêche les éléments comme les images d'être coupés ou débordants */
 }
 
 /* ========================== MODE SOMBRE ========================== */
+/* Définition des styles pour le mode sombre */
 .dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #121212; /* Fond sombre pour le mode sombre */
+    color: #e0e0e0; /* Texte clair pour le mode sombre */
 }
 
 /* ========================== CONTENEUR PRINCIPAL ========================== */
+/* Style du conteneur principal de l'application (générateur de blagues) */
 .jokeapp {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 400px;
-    transition: background 0.3s, color 0.3s;
-    position: relative;
-    z-index: 10; /* Assure que le conteneur principal reste au-dessus des images */
+    background: white; /* Fond blanc par défaut pour le conteneur */
+    padding: 20px; /* Espacement interne autour du contenu */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Ombre légère autour du conteneur */
+    text-align: center; /* Centrer le texte à l'intérieur du conteneur */
+    width: 400px; /* Largeur fixe pour le conteneur */
+    transition: background 0.3s, color 0.3s; /* Transition douce lors du changement de mode */
+    position: relative; /* Permet aux éléments internes d'être positionnés par rapport au conteneur */
+    z-index: 10; /* Assure que le conteneur est au-dessus des autres éléments */
 }
 
 /* Mode sombre pour le conteneur */
 .dark-mode .jokeapp {
-    background: #1e1e1e;
-    color: #e0e0e0;
+    background: #1e1e1e; /* Fond plus sombre pour le mode sombre */
+    color: #e0e0e0; /* Texte clair pour le mode sombre */
 }
 
 /* ========================== BOUTONS ========================== */
+/* Style général des boutons */
 button {
-    padding: 10px 15px;
-    margin: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s, transform 0.2s;
+    padding: 10px 15px; /* Espacement interne du bouton */
+    margin: 10px; /* Espacement extérieur entre les boutons */
+    border: none; /* Retire les bordures par défaut */
+    border-radius: 8px; /* Coins arrondis pour les boutons */
+    cursor: pointer; /* Curseur en forme de main lors du survol */
+    font-size: 16px; /* Taille de la police pour les boutons */
+    transition: background 0.3s, transform 0.2s; /* Transition pour l'arrière-plan et l'effet de transformation */
 }
 
-/* Bouton normal */
+/* Bouton par défaut */
 button {
-    background-color: #007bff;
-    color: white;
+    background-color: #007bff; /* Couleur de fond bleue pour les boutons par défaut */
+    color: white; /* Texte en blanc */
 }
 
 /* Bouton en mode sombre */
 .dark-mode button {
-    background-color: #ff9800;
-    color: black;
+    background-color: #ff9800; /* Couleur orange pour les boutons en mode sombre */
+    color: black; /* Texte noir pour les boutons en mode sombre */
 }
 
-/* Effet hover */
+/* Effet hover sur les boutons */
 button:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+    transform: scale(1.05); /* Légère augmentation de la taille du bouton au survol */
+    opacity: 0.9; /* Légère diminution de l'opacité pour l'effet visuel */
 }
 
 /* ========================== SELECT ========================== */
+/* Style du menu déroulant (select) */
 select {
-    padding: 8px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    padding: 8px; /* Espacement interne pour rendre le select plus visible */
+    border-radius: 8px; /* Coins arrondis pour le menu déroulant */
+    border: 1px solid #ccc; /* Bordure gris clair */
 }
 
-/* Mode sombre pour select */
+/* Mode sombre pour le select */
 .dark-mode select {
-    background: #333;
-    color: white;
+    background: #333; /* Fond sombre pour le menu déroulant */
+    color: white; /* Texte en blanc pour le mode sombre */
 }
 
 /* ========================== BLAGUE ========================== */
+/* Style pour la zone d'affichage de la blague générée */
 #joke {
-    font-size: 20px;
-    margin-top: 20px;
-    font-weight: bold;
+    font-size: 20px; /* Taille de la police plus grande pour la blague */
+    margin-top: 20px; /* Marge au-dessus de la blague pour l'espacer du bouton */
+    font-weight: bold; /* Texte en gras pour la blague */
 }
 
 /* ========================== DIALOGUES ========================== */
+/* Style de la fenêtre modale (dialog) */
 dialog {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    background: white; /* Fond blanc pour la fenêtre modale */
+    padding: 15px; /* Espacement interne dans la fenêtre modale */
+    border-radius: 10px; /* Coins arrondis pour la fenêtre modale */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Ombre légère autour de la fenêtre modale */
 }
 
-/* Mode sombre pour dialogues */
+/* Mode sombre pour les dialogues */
 .dark-mode dialog {
-    background: #1e1e1e;
-    color: white;
+    background: #1e1e1e; /* Fond sombre pour les fenêtres modales en mode sombre */
+    color: white; /* Texte en blanc pour les fenêtres modales en mode sombre */
 }
