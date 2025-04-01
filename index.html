@@ -1,55 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Définir le jeu de caractères de la page (UTF-8) pour bien gérer les caractères spéciaux -->
     <meta charset="UTF-8">
+    
+    <!-- Permet à la page de s'adapter à la taille de l'écran du dispositif (réactif pour mobile) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titre de la page, affiché dans l'onglet du navigateur -->
     <title>JokeGenerator</title>
+    
+    <!-- Lien vers le fichier CSS externe qui contiendra le style pour la page -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- Conteneur principal pour tout le contenu de l'application -->
     <div class="'all">
+        <!-- Section de l'application de génération de blagues -->
         <div class="jokeapp">
+            <!-- Titre principal de l'application -->
             <h1>JokeGenerator</h1>
 
-            <!-- Toggle dark mode -->
+            <!-- Bouton pour activer/désactiver le mode sombre -->
             <button id="modeSombre">Changer de mode</button>
             <br><br>
 
-            <!-- Generate jokes -->
+            <!-- Bouton pour générer une nouvelle blague -->
             <button type="button" onclick="generateJoke()">Générer !</button>
+            
+            <!-- Menu déroulant pour choisir le type de blague -->
             <select name="type" id="Type">
-                <option value="none">--Choisissez le type--</option>
-                <option value="dev">Dev</option>
-                <option value="global">Global</option>
-                <option value="dark">Sombre</option>
+                <option value="none">--Choisissez le type--</option> <!-- Option par défaut -->
+                <option value="dev">Dev</option> <!-- Blagues de développeur -->
+                <option value="global">Global</option> <!-- Blagues générales -->
+                <option value="dark">Sombre</option> <!-- Blagues sombres -->
             </select>
-            <h2 id="joke"></h2> <!-- The generated joke -->
 
+            <!-- Zone d'affichage de la blague générée -->
+            <h2 id="joke"></h2> <!-- Le texte de la blague générée sera affiché ici -->
+
+            <!-- Fenêtre modale (dialog) pour afficher la réponse/explication de la blague -->
             <dialog id="rep">
+                <!-- Bouton pour fermer la fenêtre d'explication de la blague -->
                 <button autofocus id="repCloseBoutton">Retour</button>
-                <h1 id="answer">Rien ... </h1> <!-- Explanation of the joke if available -->
+                
+                <!-- Zone d'affichage de la réponse à la blague, qui peut être remplie avec une explication -->
+                <h1 id="answer">Rien ... </h1> <!-- Par défaut, la réponse est "Rien ..." -->
+                
                 <br>
-                <p>Désolé.</p>
+                <p>Désolé.</p> <!-- Message par défaut s'il n'y a pas de réponse ou d'explication -->
                 <br>
             </dialog>
+            
+            <!-- Bouton pour ouvrir la fenêtre d'explication de la blague -->
             <button id="repOpenBoutton">Réponse</button>
 
+            <!-- Fenêtre modale (dialog) pour afficher la description du type de blague -->
             <dialog id="desc">
+                <!-- Bouton pour fermer la fenêtre de description -->
                 <button autofocus id="descCloseBoutton">-</button>
-                <h1>Type : <a id="type"></a></h1>
+                
+                <!-- Zone pour afficher le type de blague sélectionné -->
+                <h1>Type : <a id="type"></a></h1> <!-- Le type de blague sera affiché ici -->
+                
                 <br>
-                <p>Encore désolé.</p>
+                <p>Encore désolé.</p> <!-- Message par défaut dans la description -->
                 <br>
             </dialog>
+            
+            <!-- Bouton pour ouvrir la fenêtre de description du type de blague -->
             <button id="descOpenBoutton">+</button>
+
             <br><br>
+
+            <!-- Bouton pour ajouter la blague actuelle aux favoris -->
             <button type="button" id="addFavorite" onclick="addToFavorites()">Ajouter aux favoris</button>
             
-
+            <!-- Lien vers le fichier JavaScript qui gère toute la logique de l'application -->
             <script src="script.js"></script>
         </div>
+
+        <!-- Section où les blagues favorites seront affichées -->
         <div class="fav">
-            <!-- Favorite jokes will be displayed here -->
+            <!-- Les blagues favorites seront insérées ici -->
         </div>
     </div>
 </body>
