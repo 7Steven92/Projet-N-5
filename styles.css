@@ -1,0 +1,93 @@
+/* Mode clair (par défaut) */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+    background: radial-gradient(circle, white 0%, rgb(212, 212, 212) 88%);
+    color : black;
+
+    transition: background-color 0.3s, color 0.3s;
+}
+#rep {
+    background-color: white;
+    color : black;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px grey;
+    border-color: white;
+}
+#desc {
+    background-color: white;
+    color : black;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px grey;
+    border-color: white;
+}
+
+.all {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.jokeapp {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+    padding: 20px 30px;
+    width: 350px;
+    text-align: center;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.cont {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+    padding: 20px 30px;
+    width: 250px;
+    text-align: center;
+    align-items: center;
+    opacity: 0.8;
+    margin-top: 20px;
+    margin-left: 47px;
+}
+
+/* Mode sombre */
+.dark-mode {
+    background: black;
+    background: radial-gradient(circle, rgb(61, 61, 61) 0%, rgb(34, 34, 34) 88%); 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode body {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    
+    color : black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode #rep {
+    background-color: grey;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    border-color: grey;
+    box-shadow: 5px 5px 5px black;
+}
+.dark-mode #desc {
+    background-color: grey;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    border-color: grey;
+    box-shadow: 5px 5px 5px black;
+}
+.dark-mode button, .dark-mode #Type {
+    background-color: rgb(32, 32, 32);
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    border-color: grey;
+    box-shadow: 2px 2px 2px grey;
+}

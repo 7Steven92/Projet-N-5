@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokeGenerator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="jokeapp">
+            <h1>JokeGenerator</h1>
+
+            <button id="modeSombre">Changer de mode</button>
+            <br><br>
+
+            <button type="button" onclick="generateJoke()">Générer !</button>
+            <select name="type" id="Type">
+                <option value="none">--Choisissez le type--</option>
+                <option value="dev">Dev</option>
+                <option value="global">Global</option>
+                <option value="dark">Sombre</option>
+            </select>
+            <h2 id="joke"></h2>
+
+            <button id="repOpenBoutton">Réponse</button>
+            <button id="descOpenBoutton">+</button>
+            <br><br>
+            <button type="button" id="addFavorite" onclick="addToFavorites()">Ajouter aux favoris</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
