@@ -1,0 +1,80 @@
+/* Mode clair (par défaut) */
+body {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(34,193,195);
+background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(255,252,86,1) 88%);
+    color : black;
+    transition: background-color 0.3s, color 0.3s;
+}
+#rep {
+    background-color: white;
+    color : black;
+}
+#desc {
+    background-color: white;
+    color : black;
+}
+
+.all {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.jokeapp {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    width: 350px;
+    text-align: center;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.cont {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    width: 250px;
+    text-align: center;
+    align-items: center;
+    opacity: 0.8;
+    margin-top: 20px;
+    margin-left: 47px;
+}
+
+/* Mode sombre */
+.dark-mode {
+    background: rgb(127,163,163);
+    background: radial-gradient(circle, rgba(127,163,163,1) 0%, rgba(43,43,38,1) 88%); 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode body {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    
+    color : black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode #rep {
+    background-color: grey;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dark-mode #desc {
+    background-color: grey;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dark-mode button, .dark-mode #Type {
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}

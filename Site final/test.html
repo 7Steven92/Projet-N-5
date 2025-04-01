@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokeGenerator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="'all">
+    <div class="jokeapp">
+        <h1>JokeGenerator</h1>
+
+        <!-- Toggle dark mode -->
+        <button id="modeSombre">Changer de mode</button>
+        <br><br>
+
+        <!-- Generate jokes -->
+        <button type="button" onclick="generateJoke()">Générer !</button>
+        <select name="type" id="Type">
+            <option value="none">--Choisissez le type--</option>
+            <option value="dev">Dev</option>
+            <option value="global">Global</option>
+            <option value="dark">Sombre</option>
+        </select>
+        <h2 id="joke"></h2> <!-- The generated joke -->
+
+        <dialog id="rep">
+            <button autofocus id="repCloseBoutton">Retour</button>
+            <h1 id="answer">Rien ... </h1> <!-- Explanation of the joke if available -->
+            <br>
+            <p>Désolé.</p>
+            <br>
+        </dialog>
+        <button id="repOpenBoutton">Réponse</button>
+
+        <dialog id="desc">
+            <button autofocus id="descCloseBoutton">-</button>
+            <h1>Type : <a id="type"></a></h1>
+            <br>
+            <p>Encore désolé.</p>
+            <br>
+        </dialog>
+        <button id="descOpenBoutton">+</button>
+        <br><br>
+        <button type="button" id="addFavorite" onclick="addToFavorites()">Ajouter aux favoris</button>
+        
+
+        <script src="test.js"></script>
+    </div>
+    <div class="fav">
+        <!-- Favorite jokes will be displayed here -->
+    </div>
+    </div>
+</body>
+</html>
+
